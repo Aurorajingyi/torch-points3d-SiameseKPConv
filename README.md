@@ -1,3 +1,6 @@
+# Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning
+Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
+
 This Git project is a fork from Torch-Point3D depository to share code for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper: 
 
 <p align="center">
@@ -60,11 +63,13 @@ As a general philosophy we have split datasets and models by task. For example, 
 - registration
 - object_detection
 - panoptic
+- change detection
 
 where each folder contains the dataset related to each task.
 
 ## Methods currently implemented
-
+- **SiameseKPConv
+- **SiameseKPConvCls
 - **[PointNet](https://github.com/nicolas-chaulet/torch-points3d/blob/master/torch_points3d/modules/PointNet/modules.py#L54)** from Charles R. Qi _et al._: [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/abs/1612.00593) (CVPR 2017)
 - **[PointNet++](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/pointnet2)** from Charles from Charles R. Qi _et al._: [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/abs/1706.02413)
 - **[RSConv](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/RSConv)** from Yongcheng Liu _et al._: [Relation-Shape Convolutional Neural Network for Point Cloud Analysis](https://arxiv.org/abs/1904.07601) (CVPR 2019)
@@ -94,6 +99,8 @@ Please refer to our [documentation](https://torch-points3d.readthedocs.io/en/lat
 
 # Available datasets
 
+## Change detection
+- **[Urb3DCD](https://www.mdpi.com/2072-4292/13/13/2629](https://ieee-dataport.org/open-access/urb3dcd-urban-point-clouds-simulated-dataset-3d-change-detection)** from Iris de Gélis _et al._: [Change Detection in Urban Point Clouds: An Experimental Comparison with Simulated 3D Datasets](https://www.mdpi.com/2072-4292/13/13/2629)
 ## Segmentation
 
 - **[Scannet](https://github.com/ScanNet/ScanNet)** from Angela Dai _et al._: [ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes](https://arxiv.org/abs/1702.04405)
