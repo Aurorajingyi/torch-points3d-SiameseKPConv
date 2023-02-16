@@ -1,3 +1,5 @@
+This Git project is a fork from Torch-Point3D depository to share code for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper: 
+
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
 </p>
