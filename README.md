@@ -4,7 +4,7 @@ Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
 This Git project is a fork from Torch-Point3D depository to share codes for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
 
 <p align="center">
-   <img src="docs/imgs/SiamKPConv.png" width="80%">      
+   <img src="docs/imgs/SiamKPconv.png" width="80%">      
 </p>
 
 We tried our best to respect Torch-Point3D project struture. Codes for models and change-related datasets are avalaible in change detection folders of the project struture. We advise to first read the Torch-Point3D documentation. 
