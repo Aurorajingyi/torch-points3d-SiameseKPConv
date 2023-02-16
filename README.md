@@ -1,13 +1,15 @@
 # Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning
 Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
 
-This Git project is a fork from Torch-Point3D depository to share code for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
+This Git project is a fork from Torch-Point3D depository to share codes for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
 
 <p align="center">
    <img src="docs/imgs/SiamKPConv.png" >      
 </p>
 
+We tried our best to respect Torch-Point3D project struture. Codes for models and change-related datasets are avalaible in change detection folders of the project struture. We advise to first read the Torch-Point3D documentation. 
 
+# Torch-Point3D 
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
 </p>
@@ -101,7 +103,7 @@ Please refer to our [documentation](https://torch-points3d.readthedocs.io/en/lat
 |          <h3> Object Detection </h3>          |        <img src="docs/imgs/objects.png" height="220" >        |
 |       <h3> Panoptic Segmentation </h3>        |       <img src="docs/imgs/panoptic.png"  height="220">        |
 |            <h3> Registration </h3>            |      <img src="docs/imgs/registration.png" height="220">      |
-|            <h3> Change detection </h3>            |      <img src="docs/imgs/CD.png" height="220">      |
+|            <h3> Change detection </h3>        |       <img src="docs/imgs/CD.png" height="220">               |
 
 # Available datasets
 
