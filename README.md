@@ -1,7 +1,7 @@
 # Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning
 Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
 
-This Git project is a fork from Torch-Point3D depository to share codes for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
+This Git project is a fork from Torch-Point3D depository to share codes for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:  [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
 
 <p align="center">
    <img src="docs/imgs/SiamKPconv.png" width="80%">      
@@ -9,6 +9,19 @@ This Git project is a fork from Torch-Point3D depository to share codes for Siam
 
 We tried our best to respect Torch-Point3D project struture. Codes for models and change-related datasets are avalaible in change detection folders of the project struture. We advise to first read the Torch-Point3D documentation. 
 
+Citation:
+@article{DEGELIS2023274,
+title = {Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning},
+journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+volume = {197},
+pages = {274-291},
+year = {2023},
+issn = {0924-2716},
+doi = {https://doi.org/10.1016/j.isprsjprs.2023.02.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0924271623000394},
+author = {Iris {de Gélis} and Sébastien Lefèvre and Thomas Corpetti},
+keywords = {3D point clouds, Change detection, Deep learning, Siamese network, 3D Kernel Point Convolution},
+}
 # Torch-Point3D 
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
@@ -75,8 +88,8 @@ As a general philosophy we have split datasets and models by task. For example, 
 where each folder contains the dataset related to each task.
 
 ## Methods currently implemented
-- **SiameseKPConv
-- **SiameseKPConvCls
+- **SiameseKPConv** from de Gélis _et al._: [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
+- **SiameseKPConvCls** from de Gélis _et al._:  [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
 - **[PointNet](https://github.com/nicolas-chaulet/torch-points3d/blob/master/torch_points3d/modules/PointNet/modules.py#L54)** from Charles R. Qi _et al._: [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/abs/1612.00593) (CVPR 2017)
 - **[PointNet++](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/pointnet2)** from Charles from Charles R. Qi _et al._: [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/abs/1706.02413)
 - **[RSConv](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/RSConv)** from Yongcheng Liu _et al._: [Relation-Shape Convolutional Neural Network for Point Cloud Analysis](https://arxiv.org/abs/1904.07601) (CVPR 2019)
