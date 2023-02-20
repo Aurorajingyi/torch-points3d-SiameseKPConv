@@ -121,7 +121,7 @@ Please refer to our [documentation](https://torch-points3d.readthedocs.io/en/lat
 # Available datasets
 
 ## Change detection
-- **[Urb3DCD](https://www.mdpi.com/2072-4292/13/13/2629](https://ieee-dataport.org/open-access/urb3dcd-urban-point-clouds-simulated-dataset-3d-change-detection)** from Iris de Gélis _et al._: [Change Detection in Urban Point Clouds: An Experimental Comparison with Simulated 3D Datasets](https://www.mdpi.com/2072-4292/13/13/2629)
+- **[Urb3DCD](https://ieee-dataport.org/open-access/urb3dcd-urban-point-clouds-simulated-dataset-3d-change-detection)** from Iris de Gélis _et al._: [Change Detection in Urban Point Clouds: An Experimental Comparison with Simulated 3D Datasets](https://www.mdpi.com/2072-4292/13/13/2629)
 ## Segmentation
 
 - **[Scannet](https://github.com/ScanNet/ScanNet)** from Angela Dai _et al._: [ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes](https://arxiv.org/abs/1702.04405)
