@@ -6,7 +6,7 @@ data:
   dataValFile:  path/to/val
   dataTestFile:  path/to/test
   dataroot: data
-  preprocessed_dir: torch-points3d/data/${data.dataset_name}/
+  preprocessed_dir: data/${data.dataset_name}/
   nameInPly: "params" # Urb3DCD V1 : "Urb3DSimul" / Urb3DCD V2:"Params"
   first_subsampling: 1 #0.05 # Grid size of the input data
   use_category: False # Use object category information
