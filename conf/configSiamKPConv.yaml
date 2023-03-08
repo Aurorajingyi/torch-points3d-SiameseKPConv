@@ -1,7 +1,7 @@
 defaults: # for loading the default config
   - task: change_detection # Task performed (segmentation, classification etc...)
     optional: True
-  - model_type: siamesekpconv_unshared #siamesekpconv_cls  #siamesekpconv_unshared #siamesekpconv # Type of model to use, e.g. pointnet2, rsconv etc...
+  - model_type: siamesekpconv #siamesekpconv_cls  #siamesekpconv_unshared #siamesekpconv # Type of model to use, e.g. pointnet2, rsconv etc...
     optional: True
   - dataset: Urb3DSimulPair # Urb3DCD DS: Urb3DSimulPair  #Urb3DCD_cls dataset: Urb3DCDPair_cls
     optional: True
@@ -18,7 +18,7 @@ defaults: # for loading the default config
   - hydra/output: custom  # add the support for user-defined experiment folder (where to save the experiment files)
 
 job_name: SiamKPConv-${now:%Y-%m-%d} # prefix name for saving the experiment file.
-model_name: SiameseKPConvUnshared #SiameseKPConv_cls  #SiameseKPConvUnshared #SiameseKPConv # Name of the specific model to load
+model_name: SiameseKPConv #SiameseKPConv_cls  #SiameseKPConvUnshared #SiameseKPConv # Name of the specific model to load
 update_lr_scheduler_on: "on_epoch" # ["on_epoch", "on_num_batch", "on_num_sample"]
 selection_stage: ""
 pretty_print: True
