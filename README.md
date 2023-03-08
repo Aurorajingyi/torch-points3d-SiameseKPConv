@@ -22,6 +22,10 @@ url = {https://www.sciencedirect.com/science/article/pii/S0924271623000394},
 author = {Iris {de Gélis} and Sébastien Lefèvre and Thomas Corpetti},
 keywords = {3D point clouds, Change detection, Deep learning, Siamese network, 3D Kernel Point Convolution},
 }
+
+A first step to use these codes is to configure your training and dataloader. Please have a look in the conf folder. To train Siamese KPConv, the trainSiamKPConv.py file can be used. To test use eval_SiamKPConv.py.
+
+
 # Torch-Point3D 
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
