@@ -180,8 +180,8 @@ class Trainer:
         self._is_training = False
 
         epoch = self._checkpoint.start_epoch
-        if self._dataset.has_val_loader:
-             self._test_epoch(epoch, "val")
+        # if self._dataset.has_val_loader:
+        #      self._test_epoch(epoch, "val")
 
         if self._dataset.has_test_loaders:
             if not stage_name or stage_name == "test":
