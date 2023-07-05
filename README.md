@@ -1,13 +1,32 @@
 # Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning
 Iris de Gélis, Sébastien Lefèvre and Thomas Corpetti (ISPRS Journal, 2023)
 
-This Git project is a fork from Torch-Point3D depository to share code for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:
+This Git project is a fork from Torch-Point3D depository to share codes for Siamese KPConv and Siamese KPConv Cls networks for 3D point clouds change segmentation and classification respectively. See our paper:  [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
 
 <p align="center">
-   <img src="docs/imgs/SiamKPConv.png" >      
+   <img src="docs/imgs/SiamKPconv.png" width="80%">      
 </p>
 
+We tried our best to respect Torch-Point3D project struture. Codes for models and change-related datasets are avalaible in change detection folders of the project struture. We advise to first read the Torch-Point3D documentation.
 
+Citation:
+@article{DEGELIS2023274,
+title = {Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning},
+journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+volume = {197},
+pages = {274-291},
+year = {2023},
+issn = {0924-2716},
+doi = {https://doi.org/10.1016/j.isprsjprs.2023.02.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0924271623000394},
+author = {Iris {de Gélis} and Sébastien Lefèvre and Thomas Corpetti},
+keywords = {3D point clouds, Change detection, Deep learning, Siamese network, 3D Kernel Point Convolution},
+}
+
+A first step to use these codes is to configure your training and dataloader. Please have a look in the conf folder. To train Siamese KPConv, the trainSiamKPConv.py file can be used. To test use eval_SiamKPConv.py.
+
+
+# Torch-Point3D
 <p align="center">
   <img width="40%" src="https://raw.githubusercontent.com/nicolas-chaulet/torch-points3d/master/docs/logo.png" />
 </p>
@@ -73,8 +92,8 @@ As a general philosophy we have split datasets and models by task. For example, 
 where each folder contains the dataset related to each task.
 
 ## Methods currently implemented
-- **[SiameseKPConv]
-- **[SiameseKPConvCls]
+- **SiameseKPConv** from de Gélis _et al._: [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
+- **SiameseKPConvCls** from de Gélis _et al._:  [Siamese KPConv: 3D multiple change detection from raw point clouds using deep learning](https://www.sciencedirect.com/science/article/pii/S0924271623000394?via%3Dihub)
 - **[PointNet](https://github.com/nicolas-chaulet/torch-points3d/blob/master/torch_points3d/modules/PointNet/modules.py#L54)** from Charles R. Qi _et al._: [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/abs/1612.00593) (CVPR 2017)
 - **[PointNet++](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/pointnet2)** from Charles from Charles R. Qi _et al._: [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/abs/1706.02413)
 - **[RSConv](https://github.com/nicolas-chaulet/torch-points3d/tree/master/torch_points3d/modules/RSConv)** from Yongcheng Liu _et al._: [Relation-Shape Convolutional Neural Network for Point Cloud Analysis](https://arxiv.org/abs/1904.07601) (CVPR 2019)
@@ -101,12 +120,12 @@ Please refer to our [documentation](https://torch-points3d.readthedocs.io/en/lat
 |          <h3> Object Detection </h3>          |        <img src="docs/imgs/objects.png" height="220" >        |
 |       <h3> Panoptic Segmentation </h3>        |       <img src="docs/imgs/panoptic.png"  height="220">        |
 |            <h3> Registration </h3>            |      <img src="docs/imgs/registration.png" height="220">      |
-|            <h3> Change detection </h3>            |      <img src="docs/imgs/CD.png" height="220">      |
+|            <h3> Change detection </h3>        |       <img src="docs/imgs/CD.png" height="220">               |
 
 # Available datasets
 
 ## Change detection
-- **[Urb3DCD](https://www.mdpi.com/2072-4292/13/13/2629](https://ieee-dataport.org/open-access/urb3dcd-urban-point-clouds-simulated-dataset-3d-change-detection)** from Iris de Gélis _et al._: [Change Detection in Urban Point Clouds: An Experimental Comparison with Simulated 3D Datasets](https://www.mdpi.com/2072-4292/13/13/2629)
+- **[Urb3DCD](https://ieee-dataport.org/open-access/urb3dcd-urban-point-clouds-simulated-dataset-3d-change-detection)** from Iris de Gélis _et al._: [Change Detection in Urban Point Clouds: An Experimental Comparison with Simulated 3D Datasets](https://www.mdpi.com/2072-4292/13/13/2629)
 ## Segmentation
 
 - **[Scannet](https://github.com/ScanNet/ScanNet)** from Angela Dai _et al._: [ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes](https://arxiv.org/abs/1702.04405)

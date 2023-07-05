@@ -2,11 +2,11 @@ data:
   class: Urb3DCD_cls.Urb3DCDDataset_cls
   dataset_name: "Urb3DCD_cls"
   task: change_detection
-  dataTrainFile:  /share/projects/deep3dt/datasets/Simul/Urb3DCD_cls/Train/ #/gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V1/5-MultiSensor/Train/ #
-  dataValFile:  /share/projects/deep3dt/datasets/Simul/Urb3DCD_cls/Val/ #/gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V1/5-MultiSensor/Val/ #
-  dataTestFile:  /share/projects/deep3dt/datasets/Simul/Urb3DCD_cls/Test/ #/gpfswork/rech/rin/utf14pr/dataset/Urb3DSimul/IEEE_Dataset_V1/5-MultiSensor/Train/ #
+  dataTrainFile:  path_to_train
+  dataValFile:  path_to_val
+  dataTestFile:  path_to_test
   dataroot: data
-  preprocessed_dir: /share/home/degelis/dev/torch-points3d/data/${data.dataset_name}/cls_mini2/ #/gpfswork/rech/rin/utf14pr/dev/torch-points3d/data/${data.dataset_name}/5-MultiSensor/ #
+  preprocessed_dir: data/${data.dataset_name}/
   nameInPly: "params" # IEEE V1 : "Urb3DSimul" / IEEE V2:"Params"
   first_subsampling: 0.3 #0.05 # Grid size of the input data
   use_category: False # Use object category information
