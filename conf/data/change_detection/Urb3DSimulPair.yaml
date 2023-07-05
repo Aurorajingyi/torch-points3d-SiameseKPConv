@@ -7,7 +7,7 @@ data:
   dataTestFile:  path/to/test
   dataroot: data
   preprocessed_dir: data/${data.dataset_name}/
-  nameInPly: "params" # Urb3DCD V1 : "Urb3DSimul" / Urb3DCD V2:"Params"
+  nameInPly: "params" # Urb3DCD V1 : "Urb3DSimul" / Urb3DCD V2:"params"
   first_subsampling: 1 #0.05 # Grid size of the input data
   use_category: False # Use object category information
   radius: 50
@@ -22,4 +22,3 @@ data:
 
   load_preprocessed: False # Wether to load or not pre_transform point clouds, if not original files will be computed again
   load_trees: False # Wether to load or not kd trees if possible
-
