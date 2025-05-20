@@ -88,6 +88,7 @@ class BaseDataset:
         self.set_filter(dataset_opt)
 
         self.used_properties = {}
+        self.feature_dimension = 0
 
     @staticmethod
     def remove_transform(transform_in, list_transform_class):
@@ -247,6 +248,7 @@ class BaseDataset:
 
         if precompute_multi_scale:
             self.set_strategies(model)
+        self.feature_dimension = self._feature_dimension()
 
     def _dataloader(self, dataset, pre_batch_collate_transform, conv_type, precompute_multi_scale, **kwargs):
         batch_collate_function = self.__class__._get_collate_function(
@@ -420,10 +422,9 @@ class BaseDataset:
     def weight_classes(self):
         return getattr(self.train_dataset, "weight_classes", None)
 
-    @property  # type: ignore
-    @save_used_properties
-    def feature_dimension(self):
+    def _feature_dimension(self):
         if self.train_dataset:
+            #print(self.train_dataset)
             return self.train_dataset.num_features
         elif self.test_dataset is not None:
             if isinstance(self.test_dataset, list):
@@ -434,6 +435,22 @@ class BaseDataset:
             return self.val_dataset.num_features
         else:
             raise NotImplementedError()
+
+    # @property  # type: ignore
+    # @save_used_properties
+    # def feature_dimension(self):
+    #     if self.train_dataset:
+    #         print(self.train_dataset)
+    #         return self.train_dataset.num_features
+    #     elif self.test_dataset is not None:
+    #         if isinstance(self.test_dataset, list):
+    #             return self.test_dataset[0].num_features
+    #         else:
+    #             return self.test_dataset.num_features
+    #     elif self.val_dataset is not None:
+    #         return self.val_dataset.num_features
+    #     else:
+    #         raise NotImplementedError()
 
     @property
     def batch_size(self):

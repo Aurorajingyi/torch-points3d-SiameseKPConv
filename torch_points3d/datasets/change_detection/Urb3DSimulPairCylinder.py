@@ -108,6 +108,8 @@ class Urb3DSimul(Dataset):
             self.get_nb_elt_class()
         self.weight_classes = 1 - self.nb_elt_class / self.nb_elt_class.sum()
 
+    def num_features(self) -> int:
+        return 7
 
     def _get_paths(self):
         self.filesPC0 = []
@@ -122,6 +124,7 @@ class Urb3DSimul(Dataset):
                     elif f.name == "pointCloud1.ply":
                         self.filesPC1.append(f.path)
                 curDir.close()
+            #break #TODO
         globPath.close()
 
 
@@ -477,6 +480,9 @@ class Urb3DSimulCylinder(Urb3DSimulSphere):
                     idx += 1
             return pair_cylinders
 
+    def __getitem__(self,idx):
+        return self.get(idx)
+
     def _get_random(self):
         # Random cylinder biased towards getting more low frequency classes
         chosen_label = np.random.choice(self._labels, p=self._label_counts)
@@ -717,3 +723,12 @@ def to_ply(pos, label, file, color = OBJECT_COLOR, sf = None):
     el = PlyElement.describe(ply_array, "params")
     PlyData([el], byte_order=">").write(file)
 
+# import torch.utils.data as data_utils
+# if __name__ == "__main__":
+#     ds = Urb3DSimulCylinder(filePaths='/mnt/d/data_Urb3DCD/IEEE_Dataset_V2_Lid05_MS/IEEE_Dataset_V2_Lid05_MS/5-MultiSensor/Train',
+#                             preprocessed_dir='data/AAA/')
+#     train_loader = data_utils.DataLoader(ds,batch_size=1,shuffle=False)
+#     train_loader.__len__()
+#     train_loader.__getitem__()
+#     for i, data in enumerate(train_loader):
+#         print(i)

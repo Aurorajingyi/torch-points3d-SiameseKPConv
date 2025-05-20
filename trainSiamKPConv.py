@@ -5,7 +5,7 @@ from torch_points3d.trainer_SiamKPConv import Trainer
 
 
 # @hydra.main(config_path="conf/configUrb3D.yaml")
-@hydra.main(config_path="/mnt/d/n-siamkpcon/torch-points3d-SiameseKPConv", config_name="configSiamKPConv.yaml")
+@hydra.main(config_path="/mnt/d/n-siamkpconv/torch-points3d-SiameseKPConv/conf", config_name="configSiamKPConv.yaml")
 def main(cfg):
     OmegaConf.set_struct(cfg, False)  # This allows getattr and hasattr methods to function correctly
     if cfg.pretty_print:

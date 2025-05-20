@@ -117,7 +117,7 @@ class Trainer:
 
         # Verify attributes in dataset
         if self._dataset.train_data is not None:
-            self._model.verify_data(self._dataset.train_dataset[0])
+            self._model.verify_data(self._dataset.train_dataset)
         elif self._dataset.val_data is not None:
             self._model.verify_data(self._dataset.val_data)
         elif self._dataset.test_data is not None:
@@ -205,6 +205,10 @@ class Trainer:
         train_loader = self._dataset.train_dataloader
 
         iter_data_time = time.time()
+        #for test only
+        #for i, data in enumerate(train_loader):
+            #print(i)
+        ####
         with Ctq(train_loader) as tq_train_loader:
             for i, data in enumerate(tq_train_loader):
                 t_data = time.time() - iter_data_time
