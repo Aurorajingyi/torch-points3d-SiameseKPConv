@@ -37,3 +37,12 @@ cv_s3dis_models/
 test/test_data
 torch_points3d/applications/weights/*
 .python-version
+
+# Ignore all .pt files
+*.pt
+
+# Ignore all .p files
+*.p
+
+# Ignore specific folder
+torch_points3d/datasets/change_detection/data/AAA/
